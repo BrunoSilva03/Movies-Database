@@ -6,9 +6,9 @@ function Header() {
         <div className={styles.navbar}>
            
                 <Link to="/Movies-Database" className={styles.link}>
-                    <h1>Movies Database</h1>
+                    <h1 className={styles.itensNavbar}>Movies Database</h1>
                 </Link>
-                <Link className={styles.link}><h3>Meus Filmes</h3></Link>
+                <Link className={styles.link}><h3 className={styles.itensNavbar}>Meus Filmes</h3></Link>
             
         </div>
     )

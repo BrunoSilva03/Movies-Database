@@ -7,10 +7,10 @@
     justify-content: space-between;
 }
 
-h1, h3, .link {
+.itensNavbar, .link {
     color: white;
     text-decoration: none;
-    transition: .5s;
+    transition: .9s;
     
 }
 
@@ -19,7 +19,6 @@ h1, h3, .link {
     border-radius: 2.5px;
 }
 
-h1:hover, h3:hover, .link:hover {
-    background: rgb(37, 37, 37);
+.itensNavbar:hover, .link:hover {
     color: red;
 }
