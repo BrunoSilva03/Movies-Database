@@ -32,13 +32,13 @@ function Home() {
     }, [])
     return(
         <>
-        <div>
+        <div className={styles.container}>
            {filmes.map((filme) => {
             return(
                 <div className={styles.cardFilme} key={filme.id}>
                     <h1><strong>{filme.title}</strong></h1>
                     <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
-                    <Link to={`/movie/${filme.id}`}>Acessar</Link>
+                    <Link to={`/movie/${filme.id}`} className={styles.btnAcessarFilme}>Acessar</Link>
                 </div>
             )
            })}
