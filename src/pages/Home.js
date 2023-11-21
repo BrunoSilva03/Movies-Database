@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
 import styles from './Home.module.css';
 import api from '../services/api'
+
+
 
 function Home() {
     const [filmes, setFilmes] = useState([]);
@@ -18,7 +21,9 @@ function Home() {
                 }
             })
 
-            console.log(response);
+            console.log(response.data.results);
+            setFilmes(response.data.results.splice(0,16));
+            //splice para mostrar só os primeiros 16 filmes
         }
 
         
@@ -27,7 +32,17 @@ function Home() {
     }, [])
     return(
         <>
-        <h1>Filmes</h1>
+        <div>
+           {filmes.map((filme) => {
+            return(
+                <div className={styles.cardFilme} key={filme.id}>
+                    <h1><strong>{filme.title}</strong></h1>
+                    <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
+                    <Link to={`/movie/${filme.id}`}>Acessar</Link>
+                </div>
+            )
+           })}
+        </div>
         </>
     )
 }
