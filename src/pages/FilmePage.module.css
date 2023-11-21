@@ -1,0 +1,39 @@
+.containerPageFilme {
+    background-color: black;
+    color: white;
+    height: 100vh;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.containerPageFilme h1 {
+    color: white;
+}
+
+.containerPageFilme img {
+    max-width: 900px;
+}
+
+.pageInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+.telaLoading {
+    background-color: black;
+    text-align: center;
+    height: 65vh;
+    
+}
+
+.telaLoading h1 {
+    color: white;
+}
