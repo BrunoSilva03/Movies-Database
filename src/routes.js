@@ -2,7 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Home from './pages/Home';
 import Header from './layoult/Header';
+import Footer from './layoult/Footer';
 import FilmePage from './pages/FilmePage';
+
 
 
 function RoutesApp() {
@@ -28,6 +30,7 @@ function RoutesApp() {
 
             </Router>
 
+           
         </div>
     )
 }

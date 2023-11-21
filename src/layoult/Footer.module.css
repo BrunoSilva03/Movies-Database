@@ -1,0 +1,7 @@
+footer {
+    padding: 40px;
+    
+    background-image: linear-gradient(black, black, black, black, white);
+    color: white;
+    text-align: center;
+}
