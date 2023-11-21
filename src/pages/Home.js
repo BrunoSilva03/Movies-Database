@@ -23,6 +23,7 @@ function Home() {
 
             console.log(response.data.results);
             setFilmes(response.data.results.splice(0,16));
+            setLoading(false);
             //splice para mostrar só os primeiros 16 filmes
         }
 
@@ -30,6 +31,14 @@ function Home() {
 
         loadFilmes();
     }, [])
+
+    if(loading) {
+        return (
+            <div className={styles.telaLoading}>
+                <h1>Sua Internet é terrivelmente lenta, aguarde enquanto carrega...</h1>
+            </div>
+        )
+    }
     return(
         <>
         <div className={styles.container}>
