@@ -4,11 +4,14 @@ import Footer from './layoult/Footer';
 
 function App() {
   return (
-    <div className="App">
-      
-      <RoutesApp />
+    <>
+      <div className="App">
+
+        <RoutesApp />
+
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
