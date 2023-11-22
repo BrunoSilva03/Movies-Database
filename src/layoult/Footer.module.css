@@ -4,4 +4,14 @@ footer {
     background-image: linear-gradient(black, black, black, black, white);
     color: white;
     text-align: center;
+    
+}
+
+footer p {
+    transition: .50s;
+}
+
+footer p:hover {
+    color: rgb(252, 252, 95);
+    cursor: pointer;
 }

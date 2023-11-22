@@ -77,13 +77,16 @@ function FilmePage() {
                 <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
                 {filme.tagline ? <h2><strong>{filme.tagline}</strong></h2> : <p><strong>Tagline indisponível</strong></p>}
                 {filme.overview ? <p>{filme.overview}</p> : <p>Sem sinopse disponível.</p>}
-                <p><strong>Gênero: </strong><span style={{ textDecoration: "line-through" }}>Pendente</span></p>
-                <p>Data de lançamento: {converteDate()}</p>
-                {console.log("genero1: ")}
+                <p><strong>Gênero: </strong><span style={{ textDecoration: "line-through" }}>Pendente</span> <span><strong>Data de lançamento:</strong> {converteDate()}</span></p>
+
+                <div className={styles.areaButton}>
+                    <button>Salvar Filme</button> <button>Trailer</button>
+                </div>
+
 
 
             </div>
-            
+
         </div>
     )
 }
