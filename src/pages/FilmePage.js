@@ -70,6 +70,8 @@ function FilmePage() {
         return dataBR;
     }
 
+    
+
     return (
         <div className={styles.containerPageFilme}>
             <div className={styles.pageInfo}>
@@ -80,7 +82,8 @@ function FilmePage() {
                 <p><strong>Gênero: </strong><span style={{ textDecoration: "line-through" }}>Pendente</span> <span><strong>Data de lançamento:</strong> {converteDate()}</span></p>
 
                 <div className={styles.areaButton}>
-                    <button>Salvar Filme</button> <button>Trailer</button>
+                    <button>Salvar Filme</button> 
+                    <button> <a target="_blank" link="external" href={`https://youtube.com/results?search_query=${filme.title}` + " Trailer"}>Trailer</a></button>
                 </div>
 
 
