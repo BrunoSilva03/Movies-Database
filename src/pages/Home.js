@@ -47,6 +47,7 @@ function Home() {
                 <div className={styles.cardFilme} key={filme.id}>
                     <h1><strong>{filme.title}</strong></h1>
                     <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title} />
+                    {filme.overview ? <p>{filme.overview}</p> : <p>Sem sinopse disponível.</p>}
                     <Link to={`/movie/${filme.id}`} className={styles.btnAcessarFilme}>Acessar</Link>
                 </div>
             )
