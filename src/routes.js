@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Header from './layoult/Header';
 import Footer from './layoult/Footer';
 import FilmePage from './pages/FilmePage';
+import Favoritos from './pages/Favoritos';
 import Error from './pages/Error';
 
 
@@ -24,6 +25,8 @@ function RoutesApp() {
                     <Route path="/Movies-Database" element={ <Home /> } />
 
                     <Route path="/movie/:id" element={ <FilmePage /> } />
+
+                    <Route path="/favoritos" element={ <Favoritos /> } />
 
                    <Route path="*" element={ <Error /> } /> 
 
