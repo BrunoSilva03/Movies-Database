@@ -1,0 +1,38 @@
+.container {
+    height: 67vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.conteudo {
+    width: 900px;
+    height: 69vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    gap: .5em;
+}
+
+.conteudo img {
+    width: 500px;
+}
+
+.buttonLink {
+text-decoration: none;
+background: rgb(0, 247, 255);
+color: white;
+padding: 10px;
+border-radius: 5px;
+}
+
+.buttonLink:hover {
+    background:rgba(0, 247, 255, 0.779)
+}
