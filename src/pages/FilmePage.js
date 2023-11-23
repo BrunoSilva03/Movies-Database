@@ -70,6 +70,10 @@ function FilmePage() {
         return dataBR;
     }
 
+    function converteGenre() {
+        return filme.genres[0].name;
+    }
+
     
 
     return (
@@ -79,7 +83,8 @@ function FilmePage() {
                 <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
                 {filme.tagline ? <h2><strong>{filme.tagline}</strong></h2> : <p><strong>Tagline indisponível</strong></p>}
                 {filme.overview ? <p>{filme.overview}</p> : <p>Sem sinopse disponível.</p>}
-                <p><strong>Gênero: </strong><span style={{ textDecoration: "line-through" }}>Pendente</span> <span><strong>Data de lançamento:</strong> {converteDate()}</span></p>
+                <p className={styles.infoView}><span><strong>Gênero: </strong> {filme.genres[0].name}</span>
+                <span><strong>Data de lançamento:</strong> {converteDate()}</span></p>
 
                 <div className={styles.areaButton}>
                     <button>Salvar Filme</button> 
