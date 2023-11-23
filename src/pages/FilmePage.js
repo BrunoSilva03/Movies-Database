@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from './FilmePage.module.css';
-import styles2 from './Home.module.css';
 import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 import api from '../services/api';
 
@@ -70,8 +70,22 @@ function FilmePage() {
         return dataBR;
     }
 
-    function converteGenre() {
-        return filme.genres[0].name;
+    function salvar() {
+        const lista = localStorage.getItem("@filmesfavoritos");
+
+        let filmesSalvos = JSON.parse(lista) || [];
+
+        const hasFilme = filmesSalvos.some((filmeSalvo) => filmeSalvo.id === filme.id);
+
+        if(hasFilme) {
+            toast.warn('Este filme já está na sua lista de favoritos!!!');
+            return;
+        }
+
+        filmesSalvos.push(filme);
+
+        localStorage.setItem("@filmesfavoritos", JSON.stringify(filmesSalvos));
+        toast.success('Filme Salvo com Sucesso!!!');
     }
 
     
@@ -80,14 +94,14 @@ function FilmePage() {
         <div className={styles.containerPageFilme}>
             <div className={styles.pageInfo}>
                 <h1>{filme.title}</h1>
+                {filme.tagline ? <h2><strong style={{fontStyle: 'italic'}}>---{filme.tagline}---</strong></h2> : <p><strong>Tagline indisponível</strong></p>}
                 <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
-                {filme.tagline ? <h2><strong>{filme.tagline}</strong></h2> : <p><strong>Tagline indisponível</strong></p>}
                 {filme.overview ? <p>{filme.overview}</p> : <p>Sem sinopse disponível.</p>}
                 <p className={styles.infoView}><span><strong>Gênero: </strong> {filme.genres[0].name}</span>
                 <span><strong>Data de lançamento:</strong> {converteDate()}</span></p>
 
                 <div className={styles.areaButton}>
-                    <button>Salvar Filme</button> 
+                    <button onClick={() => salvar()}>Salvar Filme</button> 
                     <button> <a target="_blank" link="external" href={`https://youtube.com/results?search_query=${filme.title}` + " Trailer"}>Trailer</a></button>
                 </div>
 

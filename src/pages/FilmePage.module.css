@@ -29,6 +29,10 @@
     margin-bottom: 20px;
 }
 
+.pageInfo h1 {
+    font-size: 3em;
+}
+
 .pageInfo p {
     color: white;
     max-width: 900px;
