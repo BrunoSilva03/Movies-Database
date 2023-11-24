@@ -28,11 +28,7 @@
         padding: 10px;
         border-radius: 3px;
     }
-}
-
-/* fim da media query mobile*/
-
-
+}/* fim da media query mobile*/
 
 .container {
     display: flex;
@@ -73,6 +69,13 @@ p {
 
 .btnAcessarFilme:hover {
     background-color: rgb(23, 204, 236);
+}
+
+.telaLoading {
+    background: black;
+    color: white;
+    text-align: center;
+    height: 96vh;
 }
 
 /*Galaxy Fold */
@@ -166,8 +169,6 @@ p {
 
 
     .telaLoading {
-        background-color: black;
-        text-align: center;
         height: 65vh;
 
     }

@@ -1,11 +1,22 @@
+@media screen and (max-width: 600px) {
+    footer {
+        font-size: .64em;
+    }
+}
+
 footer {
     padding: 30px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: linear-gradient(black, black, black, black, white);
     color: white;
     text-align: center;
-    
+    width: 100%;
+
 }
+
+
 
 footer p {
     transition: .50s;
@@ -14,4 +25,19 @@ footer p {
 footer p:hover {
     color: rgb(252, 252, 95);
     cursor: pointer;
+}
+
+/* Galaxy Fold*/
+@media screen and (min-width: 280px) and (max-width: 320px) {
+    footer {
+        font-size: .47em;
+    }
+}
+
+/* Surface Duo*/
+@media screen and (min-width: 500px) and (max-width: 540px) {
+    footer {
+        font-size: .63em;
+        
+    }
 }
