@@ -115,16 +115,13 @@
 
 
 
-
-
-
-
-
-
 .telaLoading {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    height: 65vh;
+    height: 90vh;
 
 }
 
