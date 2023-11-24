@@ -1,13 +1,25 @@
-.navbar {
-    background-image: linear-gradient( white , black, black, black, black);
-    
-    padding: 50px;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 25px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
 }
 
-.itensNavbar, .link {
+
+
+.navbar {
+    padding: 5px;
+    background-image: linear-gradient(white, black, black, black, black);
+    width: 100%;    
+    
+}
+
+.itensNavbar,
+.link {
     color: white;
     text-decoration: none;
     transition: .9s;
@@ -19,6 +31,19 @@
     border-radius: 2.5px;
 }
 
-.itensNavbar:hover, .link:hover {
+.itensNavbar:hover,
+.link:hover {
     color: red;
 }
+
+@media screen and (min-width: 1200px) {
+
+    
+    .navbar {
+        padding: 50px;
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+}
+
