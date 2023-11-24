@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import styles from './Favoritos.module.css';
 
@@ -12,7 +13,15 @@ function Favoritos() {
     },[])
 
 
-    function excluirFilme() {
+    function excluirFilme(id) {
+        let filtroFilmes = filmes.filter((filme) => {
+            return(filme.id !== id);
+        });
+
+        setFilmes(filtroFilmes);
+
+        localStorage.setItem("@filmesfavoritos", filtroFilmes);
+        toast.success('Filme removido da lista com Sucesso!!!');
         
     }
 
@@ -33,7 +42,7 @@ function Favoritos() {
                                 <div className={styles.areaButton}>
                                     <Link to={`/movie/${filme.id}`} ><button className={styles.btn}>Detalhes</button></Link>
 
-                                    <button className={styles.btn} onClick={excluirFilme()}>Excluir Filme</button>
+                                    <button className={styles.btn} onClick={() => excluirFilme(filme.id)}>Excluir Filme</button>
                                 </div>
                             </div>
                         </li>
