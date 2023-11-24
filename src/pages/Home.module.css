@@ -1,36 +1,146 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 1200px) {
 
+
+@media screen and (max-width: 600px) {
 
     .container {
-        display: flex;
-        flex-direction: column;
-        gap: 3em;
-        margin: 0 auto;
-        background-color: black;
+        max-width: 600px;
+    }
 
+    .cardFilme {
+        max-width: 600px;
     }
 
 
-    .cardFilme {
-        display: flex;
-        flex-direction: column;
-        width: 1000px;
-        margin: 0 auto;
-        margin-top: 33px;
-        margin-bottom: 3em;
-        gap: 3em;
-        text-align: start;
-        max-width: 900px;
-
+    .cardFilme img {
+        width: 300px;
+        height: 500px;
     }
 
     .cardFilme h1,
     p {
-        color: white;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        max-width: 300px;
     }
+
+    .btnAcessarFilme {
+        width: 300px;
+        padding: 10px;
+        border-radius: 3px;
+    }
+}
+
+/* fim da media query mobile*/
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin: 0 auto;
+    background-color: black;
+
+}
+
+.cardFilme {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 33px;
+    margin-bottom: 3em;
+    gap: 3em;
+    text-align: start;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardFilme h1,
+p {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.btnAcessarFilme {
+    text-decoration: none;
+    background-color: rgb(4, 151, 177);
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btnAcessarFilme:hover {
+    background-color: rgb(23, 204, 236);
+}
+
+/*Galaxy Fold */
+@media screen and (min-width: 280px) and (max-width: 320px) {
+
+    .cardFilme {
+        width: 250px;
+    }
+    .cardFilme img {
+        width: 200px;
+    }
+
+    .btnAcessarFilme {
+        width: 250px;
+    }
+}
+
+
+
+/* Ipad Mini */
+@media screen and (min-width: 600px) and (max-width: 779px) {
+    .cardFilme img {
+        width: 600px;
+    }
+
+    .cardFilme p {
+        font-size: 2em;
+        width: 600px;
+    }
+
+    .btnAcessarFilme {
+        padding: 10px;
+        font-size: 2em;
+        width: 300px;
+        border-radius: 5px;
+    }
+}
+
+/* Ipad Air*/
+@media screen and (min-width: 779px) and (max-width: 1200px) {
+    .cardFilme {
+        font-size: 2em;
+    }
+
+    .cardFilme h1, img, p {
+        width: 700px;
+    }
+
+    .btnAcessarFilme {
+        width: 500px;
+        padding: 25px;
+        border-radius: 5px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .cardFilme {
+        width: 1000px;
+        max-width: 900px;
+    }
+
+    .cardFilme h1 {
+        font-size: 3em;
+    }
+
+
 
     .cardFilme img {
         width: 900px;
@@ -41,22 +151,19 @@
         border-top-right-radius: 5px;
     }
 
+    .cardFilme p {
+        font-size: 2em;
+    }
+
     .btnAcessarFilme {
-        text-decoration: none;
-        background-color: rgb(4, 151, 177);
-        color: white;
         padding: 23px;
-        text-align: center;
         width: 900px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 1.5em;
     }
 
-    .btnAcessarFilme:hover {
-        background-color: rgb(23, 204, 236);
-    }
+
 
     .telaLoading {
         background-color: black;
@@ -68,4 +175,7 @@
     .telaLoading h1 {
         color: white;
     }
+
+
+
 }
