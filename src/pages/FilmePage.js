@@ -94,7 +94,7 @@ function FilmePage() {
         <div className={styles.containerPageFilme}>
             <div className={styles.pageInfo}>
                 <h1>{filme.title}</h1>
-                {filme.tagline ? <h2><strong style={{fontStyle: 'italic', fontFamily:'Courier New, Courier, monospace'}}>---{filme.tagline}---</strong></h2> : <p><strong>Tagline indisponível</strong></p>}
+                {filme.tagline ? <h2><strong style={{fontStyle: 'italic', fontFamily:'Courier New, Courier, monospace', color: 'yellow'}}>---{filme.tagline}---</strong></h2> : <p><strong>Tagline indisponível</strong></p>}
                 <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
                 {filme.overview ? <p>{filme.overview}</p> : <p>Sem sinopse disponível.</p>}
                 <p className={styles.infoView}><span><strong>Gênero: </strong> {filme.genres[0].name}</span>

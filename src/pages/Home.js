@@ -23,7 +23,7 @@ function Home() {
 
             console.log(response.data.results);
             setFilmes(response.data.results.splice(0,16));
-            setLoading(false);
+            setLoading(true);
             //splice para mostrar só os primeiros 16 filmes
         }
 

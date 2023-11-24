@@ -30,6 +30,7 @@
     }
 }/* fim da media query mobile*/
 
+
 .container {
     display: flex;
     flex-direction: column;
